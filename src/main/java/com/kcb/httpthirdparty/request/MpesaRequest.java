@@ -1,132 +1,121 @@
 package com.kcb.httpthirdparty.request;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class MpesaRequest {
 	
-	@JsonProperty("InitiatorName")
-	private String initiatorName;
+	private String InitiatorName;
 	
-	@JsonProperty("SecurityCredential")
-	private String securityCredential;
+	private String SecurityCredential;
 	
-	@JsonProperty("CommandID")
-	private String commandID;
+	private String CommandID;
 	
-	@JsonProperty("Amount")
-	private String amount;
+	private String Amount;
 	
-	@JsonProperty("PartyA")
-	private String partyA;
+	private String PartyA;
 	
-	@JsonProperty("PartyB")
-	private String partyB;
+	private String PartyB;
 	
-	@JsonProperty("Remarks")
-	private String remarks;
+	private String Remarks;
 	
-	@JsonProperty("QueueTimeOutURL")
-	private String queueTimeOutURL;
+	private String QueueTimeOutURL;
 	
-	@JsonProperty("ResultURL")
-	private String resultURL;
+	private String ResultURL;
 	
-	@JsonProperty("Occassion")
-	private String occassion;
+	private String Occassion;
+	
 
 	public MpesaRequest(String initiatorName, String securityCredential, String commandID, String amount, String partyA,
 			String partyB, String remarks, String queueTimeOutURL, String resultURL, String occassion) {
 		super();
-		this.initiatorName = initiatorName;
-		this.securityCredential = securityCredential;
-		this.commandID = commandID;
-		this.amount = amount;
-		this.partyA = partyA;
-		this.partyB = partyB;
-		this.remarks = remarks;
-		this.queueTimeOutURL = queueTimeOutURL;
-		this.resultURL = resultURL;
-		this.occassion = occassion;
+		InitiatorName = initiatorName;
+		SecurityCredential = securityCredential;
+		CommandID = commandID;
+		Amount = amount;
+		PartyA = partyA;
+		PartyB = partyB;
+		Remarks = remarks;
+		QueueTimeOutURL = queueTimeOutURL;
+		ResultURL = resultURL;
+		Occassion = occassion;
 	}
 
 	public String getInitiatorName() {
-		return initiatorName;
+		return InitiatorName;
 	}
 
 	public void setInitiatorName(String initiatorName) {
-		this.initiatorName = initiatorName;
+		InitiatorName = initiatorName;
 	}
 
 	public String getSecurityCredential() {
-		return securityCredential;
+		return SecurityCredential;
 	}
 
 	public void setSecurityCredential(String securityCredential) {
-		this.securityCredential = securityCredential;
+		SecurityCredential = securityCredential;
 	}
 
 	public String getCommandID() {
-		return commandID;
+		return CommandID;
 	}
 
 	public void setCommandID(String commandID) {
-		this.commandID = commandID;
+		CommandID = commandID;
 	}
 
 	public String getAmount() {
-		return amount;
+		return Amount;
 	}
 
 	public void setAmount(String amount) {
-		amount = amount;
+		Amount = amount;
 	}
 
 	public String getPartyA() {
-		return partyA;
+		return PartyA;
 	}
 
 	public void setPartyA(String partyA) {
-		this.partyA = partyA;
+		PartyA = partyA;
 	}
 
 	public String getPartyB() {
-		return partyB;
+		return PartyB;
 	}
 
 	public void setPartyB(String partyB) {
-		this.partyB = partyB;
+		PartyB = partyB;
 	}
 
 	public String getRemarks() {
-		return remarks;
+		return Remarks;
 	}
 
 	public void setRemarks(String remarks) {
-		this.remarks = remarks;
+		Remarks = remarks;
 	}
 
 	public String getQueueTimeOutURL() {
-		return queueTimeOutURL;
+		return QueueTimeOutURL;
 	}
 
 	public void setQueueTimeOutURL(String queueTimeOutURL) {
-		this.queueTimeOutURL = queueTimeOutURL;
+		QueueTimeOutURL = queueTimeOutURL;
 	}
 
 	public String getResultURL() {
-		return resultURL;
+		return ResultURL;
 	}
 
 	public void setResultURL(String resultURL) {
-		this.resultURL = resultURL;
+		ResultURL = resultURL;
 	}
 
 	public String getOccassion() {
-		return occassion;
+		return Occassion;
 	}
 
 	public void setOccassion(String occassion) {
-		this.occassion = occassion;
+		Occassion = occassion;
 	}
 
 }

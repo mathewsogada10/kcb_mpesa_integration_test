@@ -65,4 +65,6 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
         //.antMatchers(HttpMethod.POST, SECURED_PATTERN).access(SECURED_WRITE_SCOPE)
         .antMatchers(HttpMethod.OPTIONS,"/oauth/token").permitAll();
     }
+    
+	
 }

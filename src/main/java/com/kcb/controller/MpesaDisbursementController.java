@@ -8,24 +8,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kcb.http.request.Disbursement;
+import com.kcb.httpthirdparty.response.MpesaResponse;
 import com.kcb.service.PaymentService;
 
 @RestController
-@RequestMapping(value="secured/mpesa/")
+@RequestMapping(value="mpesa/")
 public class MpesaDisbursementController {
 	
 	@Autowired
 	public PaymentService paymentService;
 	
 	
-	@RequestMapping(value="/payment/request", method=RequestMethod.POST)
-	public void recievePayment(@RequestBody Disbursement disbursement) {
-		paymentService.processPayment(disbursement);
+	@RequestMapping(value="secured/payment/request", method=RequestMethod.POST)
+	public String recievePayment(@RequestBody Disbursement disbursement) {
+		return paymentService.processPayment(disbursement);
 	}
 	
 	@RequestMapping(value="/payment/response", method=RequestMethod.POST)
-	public String paymentResponse(@RequestBody JSONObject jsonObject) {
-	   paymentService.mpesaReponse(jsonObject);
+	public String paymentResponse(@RequestBody MpesaResponse mpesaResponse) {
+	   paymentService.mpesaReponse(mpesaResponse);
 	   return "response received";
 	}
 
